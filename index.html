@@ -57,4 +57,10 @@
             <h2>More coming soon...</h2>
         </div>
     </body>
+    <script>
+        //Enforce HTTPS (https://stackoverflow.com/a/4723302)
+        if (location.host !== "127.0.0.1" && location.protocol !== 'https:' && location.protocol !== 'file:') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
 </html>
