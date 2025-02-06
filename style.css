@@ -5,8 +5,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
+    font-family: "Calibri", serif
+}
+
+:root {
+    --size-links: 2vw;
+    --size-social-links: 2vw;
+    --size-logo: 10vw;
+    --size-h1: 4vw;
+    --size-h2: 3vw;
+    --size-h3: 2vw;
+    --size-links-spacer: 25px;
+}
+
+@media (orientation: portrait) {
+    :root {
+        --size-links: 4vw;
+        --size-social-links: 4vw;
+        --size-logo: 25vw;
+        --size-h1: 10vw;
+        --size-h2: 6vw;
+        --size-h3: 5vw;
+        --size-links-spacer: 5px;
+    }
+}
+
+
+#links {
+    font-size: var(--size-links);
+}
+
+th.spacer, td.spacer {
+    padding-left: var(--size-links-spacer);
+    padding-right: var(--size-links-spacer);
+}
+
+.social-link {
+    font-size: var(--size-social-links);
+}
+
+.logo {
+    height: var(--size-logo);
 }
 
 a {
@@ -14,14 +55,14 @@ a {
 }
 
 h1 {
-    font-size: 10vw;
+    font-size: var(--size-h1);
 }
 
 h2 {
-    font-size: 4vw;
+    font-size: var(--size-h2);
 }
 
 h3 {
-    font-size: 3vw;
+    font-size: var(--size-h3);
 }
 
